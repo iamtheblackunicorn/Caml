@@ -1,0 +1,8 @@
+.dart_tool/
+.packages
+build/
+doc/api/
+*.lock
+.DS_Store
+dist
+caml
