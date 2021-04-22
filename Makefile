@@ -1,2 +1,3 @@
 build: ; rm -rf dist && mkdir dist && dart compile exe bin/caml.dart && mv bin/caml.exe dist && mv dist/caml.exe dist/caml.bin
-test: ;  dart pub get && dart analyze . && make build && mkdir dist/caml && mkdir dist/json cp -f exampleFiles/caml/test.caml dist/caml && cd dist && chmod a+x caml && ./caml.bin --version && ./caml.bin --help && ./caml.bin --toJSON caml/test.caml && ls && ./caml.bin --toCAML json/test.json && ls
+basic_test: ;  dart pub get && dart analyze . && make build && chmod a+x caml.bin && ./caml.bin --version && ./caml.bin --help
+adanced_test: ; echo "Hello World!"
