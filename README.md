@@ -17,7 +17,7 @@ Add the library to your `pubspec.yaml` by adding this to it:
 
 ```YAML
 dependencies:
-  bake:
+  caml:
     git: git://github.com/iamtheblackunicorn/Caml.git
 ```
 
@@ -26,7 +26,7 @@ dependencies:
 Import the API like this:
 
 ```dart
-import 'package:bake/bake.dart';
+import 'package:caml/caml.dart';
 ```
 
 ## Building :hammer_and_pick:
