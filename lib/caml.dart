@@ -61,7 +61,7 @@ void convertCAMLToJSON(String filePath) {
   try{
     String camlString = File(filePath).readAsStringSync();
     String fileNameBase = filePath.split('.')[0];
-    String newFileName = '$filePath.json';
+    String newFileName = '$fileNameBase.json';
     File(newFileName).writeAsStringSync(camlToJSON(camlString));
   } catch (e) {
     printColoredString('$e', 'red');
@@ -75,7 +75,7 @@ void convertJSONToCAML(String filePath) {
   try{
     String jsonString = File(filePath).readAsStringSync();
     String fileNameBase = filePath.split('.')[0];
-    String newFileName = '$filePath.cml';
+    String newFileName = '$fileNameBase.caml';
     File(newFileName).writeAsStringSync(jsonToCAML(jsonString));
   } catch (e) {
     printColoredString('$e', 'red');
@@ -98,7 +98,7 @@ class Caml extends CommandLineApp {
 }
 
 /// This method runs the CAML command-line utility.
-void runApp(){
+void runApp(List<String> arguments){
   Caml camlApp = Caml();
   camlApp.addArgument('--toJSON', 'converts CAML to JSON', true);
   camlApp.addArgument('--toCAML', 'converts JSON to CAML', true);
@@ -118,5 +118,5 @@ void runApp(){
       )
     );
   }
-  myApp.runApp(arguments);
+  camlApp.runApp(arguments);
 }
