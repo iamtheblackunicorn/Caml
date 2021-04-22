@@ -1,2 +1,2 @@
-build: ; rm -rf dist && mkdir dist && dart compile exe bin/caml.dart && mv bin/caml.exe dist && mv dist/caml.exe dist/caml
-test: ;  dart pub get && dart analyze . && make build && cp -f exampleFile/test.caml dist && cd dist && chmod a+x caml && ./caml --version && ./caml --help && ./caml --toJSON test.caml && cat test.json && rm -rf test.caml && ./caml --toCAML test.json && cat test.caml
+build: ; rm -rf dist && mkdir dist && dart compile exe bin/caml.dart && mv bin/caml.exe dist && mv dist/caml.exe dist/caml.bin
+test: ;  dart pub get && dart analyze . && make build && mkdir dist/caml && mkdir dist/json cp -f exampleFiles/caml/test.caml dist/caml && cd dist && chmod a+x caml && ./caml.bin --version && ./caml.bin --help && ./caml.bin --toJSON caml/test.caml && ls && ./caml.bin --toCAML json/test.json && ls
