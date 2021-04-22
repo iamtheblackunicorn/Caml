@@ -114,7 +114,7 @@ void runApp(List<String> arguments){
     );
   }
   else if (camlApp.argumentWasUsed(arguments, '--toCAML') == true) {
-    convertCAMLToJSON(
+    convertJSONToCAML(
       camlApp.getArgumentData(
         arguments,
         '--toCAML'
