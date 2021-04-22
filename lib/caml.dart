@@ -80,7 +80,6 @@ void convertJSONToCAML(String filePath) {
     String fileNameBase = filePath.split('.')[0];
     String newFileName = '$fileNameBase.caml';
     String resultString = jsonToCAML(jsonString);
-    print(resultString);
     File(newFileName).writeAsStringSync(resultString);
   } catch (e) {
     printColoredString('$e', 'red');
