@@ -21,9 +21,12 @@ Map<String, String> returnData(String camlString){
       camlLines[i],
       camlRegex
     );
-    String key = data['data'][1];
-    String value = data['data'][2];
-    result.addAll({key:value});
+    if (data['data'] == null || data['data'].isEmpty){}
+    else {
+      String key = data['data'][1];
+      String value = data['data'][2];
+      result.addAll({key:value});
+    }
   }
   return result;
 }
