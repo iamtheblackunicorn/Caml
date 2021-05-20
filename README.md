@@ -49,7 +49,7 @@ $ git clone https://github.com/iamtheblackunicorn/Caml.git
 - 2.) Change into the source directory's root:
 
 ```bash
-$ cd Bake
+$ cd Caml
 ```
 
 - 3.) Compile an executable:
